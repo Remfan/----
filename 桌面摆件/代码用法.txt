@@ -1,0 +1,25 @@
+项目文件夹是指本文档所在的“桌面摆件”文件夹
+
+程序烧录方法
+1. Arduino IDE下载
+官网下载Arduino IDE，记住下载路径
+官方网址：https://www.arduino.cc/en/software
+
+2.导入程序所需库
+安装成功后，打开Arduino库所在路径。将项目文件夹下的libraries中的所有文件复制到Arduino库路径下（一般是在 C:\Users\name\Documents\Arduino\libraries）。
+
+3. 打开Arduino IDE，使用Arduino IDE打开项目文件夹下的Desk_Ornament\Desk_Ornament.ino
+
+3. 选择开发板和端口
+开发板选择 ESP32 Dev Module，可以在工具--开发板--开发板管理器中自行搜索下载
+端口按照选择因电脑而异（可以打开设备管理器，在端口一栏，查看USB端口号）
+
+4. 修改代码
+在Arduino IDE中查看Desk_Ornament.ino代码，在第32，33行，配置自己的联网数据，注意查看注释。
+修改 *ssid为要连接的wifi名称，修改*password为wifi密码（注意保留双引号）。
+
+5. 烧录代码
+接好线后，点击Arduino IDE 左上角的上传（图标是向右的箭头），等待程序上传完成。注意：在Arduino IDE显示编译成功，开始上传后，需要按住ESP32开发板上的BOOT按钮一秒钟左右后松开，程序才会开始上传。显示上传完成后，经过10s左右的白屏，程序初始化完成，桌面摆件就可以开始使用。
+
+6. 其它修改（不必需）
+可以在和风天气官网查看教程，获得自己的私钥，修改程序中的35行String UserKey为自己的私钥。
